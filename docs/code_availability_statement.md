@@ -1,3 +1,9 @@
 # Code availability statement
 
-All source code required to reproduce the analysis is provided in this repository. The repository contains scripts for downloading the OpenNeuro datasets, auditing subject registries, extracting P0 amplitude-decile and P1 PSD/bandpower feature layers, generating subject-level folds, running switchBox TSP/kTSP and classical baselines, collecting metrics, performing repeat-level statistical tests, and regenerating the main result tables and diagnostic figures. Raw EEG files are not redistributed; they are obtained from OpenNeuro using pinned dataset versions. A lightweight smoke-test mode and frozen feature-table mode are provided for rapid verification.
+All source code required for the quick reproducibility mode is provided in this repository.
+
+The repository contains scripts for validating frozen manuscript-level outputs, checking metric consistency, checking subject-level leakage constraints, exporting statistical summaries, and regenerating manuscript-level result tables.
+
+Raw OpenNeuro EEG files and derivative EEG files are not redistributed. The frozen-output mode uses curated CSV outputs stored under `results/paper_final/` to allow rapid verification of the manuscript-level results.
+
+The repository includes a smoke-test mode based on synthetic feature tables, allowing users to verify the benchmark structure and core reproducibility scripts on a new machine.

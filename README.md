@@ -1,185 +1,106 @@
-# relational-eeg-openneuro-adftd
+# Relational EEG OpenNeuro AD/FTD/CN benchmark
 
+This repository is a manuscript-specific reproducibility package for the OpenNeuro AD/FTD/CN EEG benchmark.
+
+It accompanies the manuscript:
 
 **Compact Pairwise-Rank EEG Signatures for AD/FTD/CN Classification Across Acquisition Conditions**
 
-This repository reproduces the OpenNeuro-derived benchmark reported in the manuscript. It is a paper-specific reproducible benchmark package, not a general-purpose RXA/EEG software library.
+The repository focuses on a reproducible benchmark workflow built around subject-level validation, frozen benchmark outputs, statistical summaries, and manuscript-level table exports. It is designed to let reviewers and collaborators verify the main result tables without downloading the full EEG datasets or regenerating all EEG features.
 
-## 1. What this repository reproduces
+## What this repository reproduces
 
-The intended paper workflow is:
+The current workflow reproduces the quick frozen-output mode of the benchmark:
 
 ```text
-public OpenNeuro derivative EEG files (.set)
-  -> subject registry and EC/EO audit
-  -> P0 amplitude-decile feature layer
-  -> P1 PSD/bandpower feature layer
-  -> subject-level folds
-  -> compact pairwise-rank TSP/kTSP and conventional ML baselines
-  -> collected metrics
-  -> repeat-level statistical tests
-  -> result tables and diagnostic figures
+frozen manuscript-level CSV outputs
+        ↓
+schema validation
+        ↓
+statistical summary export
+        ↓
+analysis-table export
+        ↓
+manuscript-table export
 ```
 
-The main paper results are based on public derivative EEG files, subject-level validation, and repeat-level statistical comparisons. Raw EEG preprocessing is not claimed as the main contribution.
+The repository also includes a small smoke-test benchmark using synthetic feature tables. This smoke mode verifies that the repository structure, metric functions, leakage checks, result collection, and table-export scripts work correctly.
 
-## 2. What this repository does not contain
+## Data policy
 
+Raw OpenNeuro EEG files and derivative EEG files are not redistributed in this repository.
 
-This repository is a manuscript-specific reproducibility package for the OpenNeuro AD/FTD/CN EEG benchmark. It focuses on subject-level validation, frozen benchmark outputs, statistical summaries, and reproducible table exports. It is not intended to serve as a general-purpose EEG analysis toolbox.
+The quick reproducibility mode uses selected frozen CSV outputs stored under:
 
-## 3. Reproducibility modes
+```text
+results/paper_final/
+```
 
-### Mode A1: smoke reproducibility
+These files contain curated manuscript-level outputs such as result tables, statistical summaries, selected relation summaries, checksums, and analysis tables. They are small enough to remain in the repository and allow rapid verification of the reported results.
 
-Technical smoke mode for reviewers and developers. It runs without downloading OpenNeuro and without full EEG feature extraction.
+## Main quick-start commands
 
-Inputs:
-
-- `examples/smoke_feature_tables/features_small.csv`
-- `examples/smoke_feature_tables/folds_small.csv`
-- `examples/smoke_feature_tables/job_grid_small.csv`
-- `results/example_outputs/*.csv`
-
-Outputs:
-
-- smoke benchmark results in `results/jobs/smoke/`
-- collected smoke summary in `results/summaries/`
-- example statistical tests in `results/stat_tests/`
-- optional basic diagnostic figures in `paper_outputs/figures/`
-
-Run:
+Clone the repository and install the minimal Python/R dependencies.
 
 ```bash
-make setup
 make smoke
-make collect
-make stats
-make figures
-```
-
-### Mode A2: frozen paper-level reproduction
-
-This is the preferred quick mode for manuscript-level checks. It uses the curated small CSV package in `results/paper_final/` and does not regenerate the final polished manuscript figures.
-
-Run:
-
-```bash
 make validate-frozen
 make paper-frozen
 ```
 
-Optional basic visual sanity checks, not final manuscript artwork:
+The expected behavior is:
+
+- `make smoke` runs a small synthetic benchmark and internal validation tests.
+- `make validate-frozen` checks the schema of the frozen manuscript-level CSV files.
+- `make paper-frozen` exports manuscript-level tables and statistical summaries from `results/paper_final/`.
+
+## Recommended setup
+
+Python dependencies:
 
 ```bash
-make paper-frozen-figures
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-Expected input directory:
+The R scripts require a working `Rscript` installation. The full R package environment should be restored or installed according to the local system configuration.
+
+## Repository layout
 
 ```text
-results/paper_final/tables/
-results/paper_final/stat_tests/
-results/paper_final/analysis_tables/
-results/paper_final/key_files/
+configs/                 benchmark and dataset configuration files
+scripts/                 shell wrappers for reproducibility targets
+python/                  lightweight Python utilities and validators
+R/                       R functions and benchmark/statistical scripts
+tests/                   metric, leakage, schema, and structure tests
+examples/                synthetic smoke-test feature tables
+results/paper_final/     frozen manuscript-level outputs
+paper_outputs/tables/    exported manuscript-level tables
+docs/                    reproducibility and benchmark documentation
 ```
 
-### Mode B: full OpenNeuro-derived pipeline
+## Validation principles
 
-Full reproduction from public OpenNeuro derivative EEG files. The executable wrappers are present, but full `.set` extraction still requires binding the final server-side extraction scripts.
+The benchmark is organized around subject-level validation. All rows, feature representations, and acquisition-condition variants derived from the same participant must be assigned consistently according to the validation scenario.
 
-```bash
-make download
-make audit
-make features
-make folds
-make tier1
-make collect
-make stats
-make figures
-```
+The repository includes explicit checks for:
 
-## 4. Dataset versions
+- metric consistency;
+- subject leakage;
+- required output files;
+- frozen-output schema compatibility.
 
-The intended datasets are OpenNeuro `ds004504` and `ds006036`. The main paper path uses public derivative `.set` files. Exact dataset snapshots must be pinned before public release in `configs/datasets.yaml`.
+## Frozen-output mode
 
-## 5. Feature layers
+The frozen-output mode is the recommended quick reproducibility path. It does not regenerate EEG features. Instead, it validates and exports curated CSV files derived from the final benchmark pipeline.
 
-Final paper feature layers only:
+This mode is useful for reviewers who want to verify the consistency of the manuscript tables and statistical summaries without running the full EEG processing workflow.
 
-- P0: `RAW_DECILES`, `DERIVED_DECILES_ALL`, `REGION_AGGREGATES_ALL`
-- P1: `PSD_ABSOLUTE_CHANNEL_BAND`, `PSD_REGION_ABSOLUTE`
+## Figures
 
+This repository exports tables and diagnostic summaries. Publication-quality figures may be curated separately from the exported CSV files.
 
-## 6. Validation design
+## Citation
 
-Subject-level separation is a hard constraint. All rows, acquisition-condition variants, and feature representations derived from a participant are assigned consistently according to the validation scenario.
-
-The minimal fold schema is:
-
-```text
-split_id, repeat_id, fold_id, subject_id, condition, split, task, label
-```
-
-Optional column:
-
-```text
-scenario
-```
-
-## 7. Models
-
-Relational core:
-
-- TSP k=1
-- kTSP k=3/5/9, disjoint and non-disjoint
-- kTSP CV-selected variants
-
-Classic fast baselines:
-
-- majority
-- glmnet ridge/lasso/elasticnet
-- linear SVM/liblinear
-- Euclidean kNN
-- ranger random forest
-- shallow/default XGBoost
-- shrinkage LDA
-
-
-## 8. Statistical testing
-
-Primary metric: macro-F1.
-
-Secondary metrics: MCC and balanced accuracy.
-
-The intended paper-level comparison uses repeat-level observations, not fold-level observations treated as independent samples. The example implementation computes paired Wilcoxon, paired t-test sensitivity, bootstrap confidence intervals, and simple multiple-testing corrections on frozen/example tables.
-
-## 9. Output files
-
-Key output standards are described in `docs/result_files.md`. In short:
-
-- `metrics.csv` contains fold-level model metrics.
-- `model_structure.csv` contains selected TSP/kTSP relations.
-- collected files are written to `results/summaries/`.
-- statistical tests are written to `results/stat_tests/`.
-- diagnostic figures are written to `paper_outputs/figures/`.
-
-## 10. Reproducing manuscript tables
-
-The manuscript tables should be generated from collected CSVs rather than manually typed. In quick mode, example tables are regenerated from `results/example_outputs/`.
-
-## 11. Citation
-
-Use `CITATION.cff`. Update author list, DOI, repository URL, and manuscript DOI before release.
-
-
-## 12. v3 frozen-output policy
-
-The repository should not automatically generate many publication-style figures. The paper figures can be manually polished or regenerated from the exported CSVs. The executable quick-reproduction path focuses on:
-
-- validating the frozen CSV schema,
-- exporting final paper-level tables,
-- keeping repeat-level statistical summaries visible,
-- providing only optional basic diagnostic figures.
-
-See `docs/frozen_outputs.md`.
+Please cite the associated manuscript and this repository if you use the benchmark outputs, scripts, or reproducibility workflow.

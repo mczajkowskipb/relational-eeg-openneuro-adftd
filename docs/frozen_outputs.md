@@ -1,51 +1,48 @@
-# Frozen paper-final outputs
+# Frozen manuscript-level outputs
 
-`results/paper_final/` is the quick-reproduction input for manuscript-level tables and statistical summaries. It is deliberately small and curated. It is not a dump of all historical runs.
+The directory `results/paper_final/` contains selected frozen CSV outputs used by the quick reproducibility mode.
 
-## Purpose
+These files allow manuscript-level tables, statistical summaries, and selected diagnostic summaries to be reproduced without downloading OpenNeuro data or regenerating EEG features.
 
-The frozen package allows reviewers to verify the final reported tables without downloading OpenNeuro EEG files or rerunning the full benchmark.
-
-It should contain:
+## Directory structure
 
 ```text
 results/paper_final/
-├── tables/
-├── stat_tests/
 ├── analysis_tables/
 ├── key_files/
-├── README.md
+├── stat_tests/
+├── tables/
 ├── MANIFEST_files.txt
+├── README.md
 └── SHA256SUMS.txt
 ```
 
-## Required command sequence
+## Main tables
 
-```bash
-make validate-frozen
-make paper-frozen
+The `tables/` directory contains manuscript-level summary tables, including:
+
+```text
+tier1_main_best_ktsp_vs_classic.csv
+tier2_cross_condition_best_ktsp_vs_classic.csv
+tier4_pooled_best_ktsp_vs_classic.csv
+main_best_ktsp_vs_classic_across_worlds.csv
+classifier_ranking_selected_cases.csv
+ktsp_vs_all_delta_long.csv
+win_tie_loss_summary.csv
+main_top_relation_stability.csv
+supp_delta_by_world.csv
 ```
 
-`make paper-frozen` validates the CSV schema and exports selected tables/statistical summaries to `paper_outputs/tables/`, `results/stat_tests/paper_final/`, and `results/analysis_tables/paper_final/`.
+## Statistical summaries
 
-It does **not** regenerate final manuscript figures by default. Final journal figures may be curated separately from these tables. A very small optional visual sanity check is available via:
+The `stat_tests/` directory contains repeat-level statistical comparisons and classifier-ranking summaries.
 
-```bash
-make paper-frozen-figures
-```
+The statistical workflow treats repeated observations at the appropriate repeat level rather than treating all folds as independent observations.
 
-## What not to include
+## Analysis tables
 
-Do not include:
+The `analysis_tables/` directory contains expanded summaries used for downstream reporting and diagnostic checks, including selected relation, band, channel, and region summaries.
 
-- raw OpenNeuro EEG,
-- public derivative `.set` files,
-- full job-level logs,
-- old runs,
-This repository is a manuscript-specific reproducibility package for the OpenNeuro AD/FTD/CN EEG benchmark. It focuses on subject-level validation, frozen benchmark outputs, statistical summaries, and reproducible table exports. It is not intended to serve as a general-purpose EEG analysis toolbox.
-- TUH experiments,
-- collaborator-private development tables.
+## Data policy
 
-## Source-of-truth rule
-
-Only one frozen package should be treated as the current paper source of truth. Previous folders such as early exports, metric-fix backups, or exploratory dated runs should remain outside the public quick-reproduction path.
+Raw OpenNeuro EEG files, derivative EEG files, full job logs, and exploratory runs are not redistributed in this repository.
