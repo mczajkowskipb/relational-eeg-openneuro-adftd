@@ -1,39 +1,50 @@
-relational_core:
+# Model configuration for the manuscript-specific OpenNeuro AD/FTD/CN EEG benchmark.
+# The benchmark contains compact pairwise-rank models and conventional fast baselines.
+
+relational_pairwise_rank:
   - id: TSP_k1
-    family: TSP
+    family: compact_pairwise_rank
     k: 1
     disjoint: false
+
   - id: kTSP_k3_disjoint
-    family: kTSP
+    family: compact_pairwise_rank
     k: 3
     disjoint: true
+
   - id: kTSP_k5_disjoint
-    family: kTSP
+    family: compact_pairwise_rank
     k: 5
     disjoint: true
+
   - id: kTSP_k9_disjoint
-    family: kTSP
+    family: compact_pairwise_rank
     k: 9
     disjoint: true
+
   - id: kTSP_k3_nondisjoint
-    family: kTSP
+    family: compact_pairwise_rank
     k: 3
     disjoint: false
+
   - id: kTSP_k5_nondisjoint
-    family: kTSP
+    family: compact_pairwise_rank
     k: 5
     disjoint: false
+
   - id: kTSP_k9_nondisjoint
-    family: kTSP
+    family: compact_pairwise_rank
     k: 9
     disjoint: false
+
   - id: kTSP_CV_disjoint
-    family: kTSP
-    k: CV
+    family: compact_pairwise_rank
+    k: "selected_within_training"
     disjoint: true
+
   - id: kTSP_CV_nondisjoint
-    family: kTSP
-    k: CV
+    family: compact_pairwise_rank
+    k: "selected_within_training"
     disjoint: false
 
 classic_fast:
@@ -47,10 +58,3 @@ classic_fast:
   - xgboost_shallow
   - xgboost_default
   - sda_shrinklda
-
-not_in_current_scope:
-  - RLR
-  - relKNN
-  - relational_trees
-  - deep_learning
-  - connectivity_graph_models

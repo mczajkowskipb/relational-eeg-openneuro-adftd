@@ -5,6 +5,6 @@ authors:
   - family-names: "Czajkowski"
     given-names: "Marcin"
 repository-code: "https://github.com/TO_BE_FILLED/relational-eeg-openneuro-adftd"
-version: "0.2.0-executable-skeleton"
+version: "0.3.0-frozen-modeA"
 date-released: "2026-05-19"
 license: "MIT"

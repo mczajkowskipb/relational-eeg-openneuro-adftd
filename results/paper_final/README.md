@@ -1,14 +1,7 @@
 # Paper-final frozen outputs
 
-Place the curated, small CSV package used for quick manuscript-level reproduction here.
+This directory contains selected frozen CSV outputs used by the quick reproducibility mode of the manuscript-specific OpenNeuro AD/FTD/CN EEG benchmark.
 
-This directory is intentionally empty in the skeleton. It should be populated from the selected frozen export, for example:
+The files are curated manuscript-level outputs: result tables, statistical summaries, analysis tables, selected relation summaries, and checksums. They allow the repository to reproduce table exports and validation checks without downloading OpenNeuro data or regenerating EEG features.
 
-```text
-results/paper_final/tables/
-results/paper_final/stat_tests/
-results/paper_final/analysis_tables/
-results/paper_final/key_files/
-```
-
-Do not place raw OpenNeuro files, derivative `.set` files, full job logs, or development-stage exploratory outputs here.
+Raw OpenNeuro EEG files, derivative EEG files, full job logs, and exploratory runs are not redistributed in this repository.
