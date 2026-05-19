@@ -42,7 +42,7 @@ Do not include:
 - public derivative `.set` files,
 - full job-level logs,
 - old runs,
-- RLR/relKNN/tree/deep-learning experiments,
+This repository is a manuscript-specific reproducibility package for the OpenNeuro AD/FTD/CN EEG benchmark. It focuses on subject-level validation, frozen benchmark outputs, statistical summaries, and reproducible table exports. It is not intended to serve as a general-purpose EEG analysis toolbox.
 - TUH experiments,
 - collaborator-private development tables.
 

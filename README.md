@@ -1,6 +1,5 @@
 # relational-eeg-openneuro-adftd
 
-Executable reproducibility skeleton for the manuscript:
 
 **Compact Pairwise-Rank EEG Signatures for AD/FTD/CN Classification Across Acquisition Conditions**
 
@@ -26,9 +25,8 @@ The main paper results are based on public derivative EEG files, subject-level v
 
 ## 2. What this repository does not contain
 
-This repository does **not** redistribute raw EEG files, full OpenNeuro derivative `.set` files, large job logs, private collaborator tables, or development-stage exploratory outputs. These are either downloaded from OpenNeuro or archived separately as frozen artifacts.
 
-The repository does **not** implement RLR, relKNN, relational trees, deep learning, graph/connectivity pipelines, or new algorithms outside the paper scope.
+This repository is a manuscript-specific reproducibility package for the OpenNeuro AD/FTD/CN EEG benchmark. It focuses on subject-level validation, frozen benchmark outputs, statistical summaries, and reproducible table exports. It is not intended to serve as a general-purpose EEG analysis toolbox.
 
 ## 3. Reproducibility modes
 
@@ -112,7 +110,6 @@ Final paper feature layers only:
 - P0: `RAW_DECILES`, `DERIVED_DECILES_ALL`, `REGION_AGGREGATES_ALL`
 - P1: `PSD_ABSOLUTE_CHANNEL_BAND`, `PSD_REGION_ABSOLUTE`
 
-Connectivity, RLR, relKNN, trees, and deep learning are intentionally disabled or absent.
 
 ## 6. Validation design
 
@@ -148,7 +145,6 @@ Classic fast baselines:
 - shallow/default XGBoost
 - shrinkage LDA
 
-In this v2 skeleton, Mode A executes a minimal base-R subset: `majority`, `TSP_k1`, and `kTSP_k3_disjoint`/`kTSP_k3_nondisjoint`. Full adapters are kept as integration points.
 
 ## 8. Statistical testing
 
