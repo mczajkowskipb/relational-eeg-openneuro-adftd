@@ -1,0 +1,26 @@
+datasets:
+  ds004504:
+    openneuro_id: ds004504
+    snapshot: "1.0.8"
+    role: primary
+    condition: EC
+    expected_subjects: 88
+    expected_class_counts:
+      AD: 36
+      CN: 29
+      FTD: 23
+    main_input: public_derivative_set
+    note: "Main paper path starts from public OpenNeuro derivative EEGLAB .set files, not from raw EEG preprocessing."
+
+  ds006036:
+    openneuro_id: ds006036
+    snapshot: "TO_BE_PINNED"
+    role: robustness
+    condition: EO_or_photomark
+    expected_subjects: 88
+    expected_class_counts:
+      AD: 36
+      CN: 29
+      FTD: 23
+    main_input: public_derivative_set
+    note: "Used for acquisition-condition robustness/transfer; not external validation."

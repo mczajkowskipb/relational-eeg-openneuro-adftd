@@ -1,0 +1,5 @@
+tier: 4
+name: pooled_condition_grouped_cv
+conditions: [EC, EO_or_photomark]
+grouping: subject_id
+rule: "All condition rows from a subject remain on the same side of every split."

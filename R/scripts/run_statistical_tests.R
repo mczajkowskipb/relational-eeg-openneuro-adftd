@@ -1,0 +1,8 @@
+source("R/lib/io.R")
+source("R/lib/statistics.R")
+args <- parse_args(list(input = "results/example_outputs/ktsp_vs_all_delta_long.csv", out = "results/stat_tests"))
+df <- read_csv_base(args$input)
+dir.create(args$out, recursive = TRUE, showWarnings = FALSE)
+stat <- paired_delta_tests(df, metric_col = "delta", group_cols = c("task", "feature_world"))
+write_csv_base(stat, file.path(args$out, "repeat_level_paired_tests.csv"))
+message_step("wrote statistical tests to ", args$out)

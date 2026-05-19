@@ -1,0 +1,13 @@
+outputs:
+  tables_dir: paper_outputs/tables
+  figures_dir: paper_outputs/figures
+  latex_dir: paper_outputs/latex
+basic_figures:
+  - benchmark_coverage_map
+  - best_ktsp_vs_best_classic
+  - delta_heatmap
+  - classifier_rankings_selected_cases
+  - performance_compactness
+  - channel_band_region_footprint
+  - relation_stability
+  - condition_overlap_diagnostic

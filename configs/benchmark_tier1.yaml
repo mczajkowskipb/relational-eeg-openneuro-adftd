@@ -1,0 +1,13 @@
+tier: 1
+name: main_disease_benchmark
+conditions: [EC, EO_or_photomark]
+tasks: [AD_vs_CN, AD_FTD_vs_CN, CN_vs_FTD, AD_vs_FTD]
+feature_worlds:
+  - RAW_DECILES
+  - DERIVED_DECILES_ALL
+  - REGION_AGGREGATES_ALL
+  - PSD_ABSOLUTE_CHANNEL_BAND
+  - PSD_REGION_ABSOLUTE
+models:
+  relational_core: true
+  classic_fast: true

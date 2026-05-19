@@ -1,0 +1,6 @@
+tier: 3
+name: acquisition_condition_audit
+tasks:
+  - EC_vs_EO_or_photomark
+role: nuisance_condition_analysis
+note: "Not a clinical classification task."

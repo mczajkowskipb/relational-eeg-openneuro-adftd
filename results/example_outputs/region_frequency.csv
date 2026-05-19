@@ -1,0 +1,5 @@
+region,frequency,is_example
+frontal,28,True
+temporal,12,True
+parietal,20,True
+occipital,18,True

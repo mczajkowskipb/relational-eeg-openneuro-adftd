@@ -1,0 +1,5 @@
+subject_id,class_label,condition,feature_world,Fp1_delta_D10,Fp1_delta_D50,Fp1_delta_D90,Pz_alpha_power,O1_alpha_power
+sub-001,AD,EC,RAW_DECILES,0.10,0.22,0.40,1.10,0.95
+sub-002,CN,EC,RAW_DECILES,0.08,0.18,0.35,1.80,1.65
+sub-003,FTD,EC,RAW_DECILES,0.11,0.24,0.42,1.25,1.05
+sub-004,CN,EC,RAW_DECILES,0.07,0.17,0.33,1.70,1.58

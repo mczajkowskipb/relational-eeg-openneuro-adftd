@@ -1,0 +1,8 @@
+source("R/lib/io.R")
+source("R/lib/collectors.R")
+args <- parse_args(list(jobs = "results/jobs/smoke", out = "results/summaries/smoke_collected_metrics.csv", structure_out = "results/analysis_tables/smoke_model_structure.csv"))
+metrics <- collect_metric_files(args$jobs)
+write_csv_base(metrics, args$out)
+structure <- collect_structure_files(args$jobs)
+if (nrow(structure) > 0) write_csv_base(structure, args$structure_out)
+message_step("collected metrics: ", args$out)

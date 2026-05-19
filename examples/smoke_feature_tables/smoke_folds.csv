@@ -1,0 +1,5 @@
+repeat_id,fold_id,subject_id,split,condition
+1,1,sub-001,train,EC
+1,1,sub-002,train,EC
+1,1,sub-003,test,EC
+1,1,sub-004,test,EC

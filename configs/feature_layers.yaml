@@ -1,0 +1,28 @@
+feature_layers:
+  P0:
+    description: "Amplitude-decile feature layer."
+    worlds:
+      RAW_DECILES:
+        enabled: true
+        description: "Channel/band amplitude distribution deciles."
+      DERIVED_DECILES_ALL:
+        enabled: true
+        description: "Spread, center, tail imbalance and asymmetry from deciles."
+      REGION_AGGREGATES_ALL:
+        enabled: true
+        description: "Region/lobe aggregates derived from P0 features."
+
+  P1:
+    description: "PSD/bandpower feature layer."
+    worlds:
+      PSD_ABSOLUTE_CHANNEL_BAND:
+        enabled: true
+        description: "Absolute bandpower per channel and band."
+      PSD_REGION_ABSOLUTE:
+        enabled: true
+        description: "Absolute regional bandpower summaries."
+
+disabled_optional_future:
+  CONNECTIVITY_GRAPH:
+    enabled: false
+    reason: "Not part of the current final paper pipeline unless approved later."

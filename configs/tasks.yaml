@@ -1,0 +1,38 @@
+tasks:
+  AD_vs_CN:
+    positive: AD
+    negative: CN
+    default_main: true
+    role: disease_vs_control
+
+  AD_FTD_vs_CN:
+    positive: [AD, FTD]
+    negative: CN
+    default_main: true
+    role: dementia_vs_control
+
+  CN_vs_FTD:
+    positive: FTD
+    negative: CN
+    default_main: true
+    role: disease_vs_control
+
+  AD_vs_FTD:
+    positive: AD
+    negative: FTD
+    default_main: true
+    role: stress_test
+    note: "Differential subtype task; expected to be harder and treated as stress-test."
+
+optional_not_default:
+  AD_vs_REST:
+    positive: AD
+    negative: REST
+  FTD_vs_REST:
+    positive: FTD
+    negative: REST
+  CN_vs_REST:
+    positive: CN
+    negative: REST
+  MULTICLASS_AD_CN_FTD:
+    labels: [AD, CN, FTD]

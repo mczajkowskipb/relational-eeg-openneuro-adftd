@@ -1,0 +1,21 @@
+fold_schema:
+  required_columns:
+    - split_id
+    - repeat_id
+    - fold_id
+    - subject_id
+    - condition
+    - split
+    - task
+    - label
+  optional_columns:
+    - scenario
+    - dataset
+    - diagnosis
+
+main_cv:
+  repeats: 20
+  folds: 5
+  grouped_by: subject_id
+  stratified_by: label
+  note: "Fold-level metrics are averaged within repeats before statistical tests."

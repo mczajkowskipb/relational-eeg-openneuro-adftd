@@ -1,0 +1,7 @@
+tier: 2
+name: paired_cross_condition_transfer
+scenarios:
+  - EC_train_to_EO_test
+  - EO_train_to_EC_test
+role: robustness_control
+note: "Cross-condition transfer within the same public cohort; not external validation."

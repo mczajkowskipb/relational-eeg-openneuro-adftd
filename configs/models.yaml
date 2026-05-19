@@ -1,0 +1,56 @@
+relational_core:
+  - id: TSP_k1
+    family: TSP
+    k: 1
+    disjoint: false
+  - id: kTSP_k3_disjoint
+    family: kTSP
+    k: 3
+    disjoint: true
+  - id: kTSP_k5_disjoint
+    family: kTSP
+    k: 5
+    disjoint: true
+  - id: kTSP_k9_disjoint
+    family: kTSP
+    k: 9
+    disjoint: true
+  - id: kTSP_k3_nondisjoint
+    family: kTSP
+    k: 3
+    disjoint: false
+  - id: kTSP_k5_nondisjoint
+    family: kTSP
+    k: 5
+    disjoint: false
+  - id: kTSP_k9_nondisjoint
+    family: kTSP
+    k: 9
+    disjoint: false
+  - id: kTSP_CV_disjoint
+    family: kTSP
+    k: CV
+    disjoint: true
+  - id: kTSP_CV_nondisjoint
+    family: kTSP
+    k: CV
+    disjoint: false
+
+classic_fast:
+  - majority
+  - glmnet_ridge
+  - glmnet_lasso
+  - glmnet_elasticnet
+  - svm_linear_liblinear
+  - knn_euclidean
+  - ranger_rf
+  - xgboost_shallow
+  - xgboost_default
+  - sda_shrinklda
+
+not_in_current_scope:
+  - RLR
+  - relKNN
+  - relational_trees
+  - deep_learning
+  - connectivity_graph_models

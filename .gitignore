@@ -1,0 +1,76 @@
+# OS/editor
+.DS_Store
+Thumbs.db
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Raw and large data
+/data/raw/*
+!/data/raw/.gitkeep
+/data/derivatives/*
+!/data/derivatives/.gitkeep
+/data/features/*
+!/data/features/.gitkeep
+/data/interim/*
+
+# Large results/logs
+/results/jobs/*
+!/results/jobs/.gitkeep
+*.log
+*.tmp
+
+# Generated figures/tables can be regenerated; keep dirs
+/paper_outputs/figures/*
+!/paper_outputs/figures/.gitkeep
+/paper_outputs/tables/*
+!/paper_outputs/tables/.gitkeep
+/paper_outputs/latex/*
+!/paper_outputs/latex/.gitkeep
+
+# Environments
+.venv/
+.env
+renv/library/
+renv/staging/
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Logs and local checks
+_logs/
+_release_checks/
+*.log
+
+# Raw / derivative EEG data
+data/raw/*
+data/derivatives/*
+data/features/*
+
+# Job-level outputs
+results/jobs/*
+!results/jobs/.gitkeep
+
+# Large archives
+*.tar.gz
+*.zip
+*.7z
+
+# EEG / MATLAB / binary data
+*.set
+*.fdt
+*.edf
+*.bdf
+*.mat
+
+# Python / R local files
+__pycache__/
+*.pyc
+.Rhistory
+.RData
+.Rproj.user/

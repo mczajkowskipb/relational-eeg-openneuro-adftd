@@ -1,0 +1,5 @@
+job_id,dataset,condition,scenario,tier,task,feature_world,model,model_family,k,disjoint
+smoke_001,synthetic_smoke,EC,cv_ec,1,AD_vs_CN,P0P1_SMALL,majority,classic,,
+smoke_002,synthetic_smoke,EC,cv_ec,1,AD_vs_CN,P0P1_SMALL,TSP_k1,relational,1,false
+smoke_003,synthetic_smoke,EC,cv_ec,1,AD_vs_CN,P0P1_SMALL,kTSP_k3_disjoint,relational,3,true
+smoke_004,synthetic_smoke,EC,cv_ec,1,AD_FTD_vs_CN,P0P1_SMALL,kTSP_k3_nondisjoint,relational,3,false

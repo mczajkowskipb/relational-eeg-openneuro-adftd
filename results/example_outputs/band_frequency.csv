@@ -1,0 +1,5 @@
+band,frequency,is_example
+delta,8,True
+theta,24,True
+alpha,28,True
+beta,10,True

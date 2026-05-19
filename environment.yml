@@ -1,0 +1,18 @@
+name: relational-eeg-openneuro-adftd
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - numpy
+  - pandas
+  - pyyaml
+  - matplotlib
+  - scipy
+  - pip
+  - r-base>=4.3
+  - r-data.table
+  - r-optparse
+  - r-jsonlite
+  - r-boot
+  - pip:
+      - openneuro-py

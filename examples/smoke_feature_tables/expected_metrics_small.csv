@@ -1,0 +1,3 @@
+note,value
+expected_status,all_jobs_finish
+expected_metric_columns,macro_f1_mcc_balanced_accuracy

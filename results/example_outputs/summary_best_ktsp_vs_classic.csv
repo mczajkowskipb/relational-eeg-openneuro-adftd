@@ -1,0 +1,5 @@
+dataset,condition,task,feature_world,best_ktsp,best_classic,macro_f1_ktsp,macro_f1_classic,delta_macro_f1,mcc_ktsp,mcc_classic,is_example
+ds004504_example,EC,AD_vs_CN,REGION_AGGREGATES_ALL,kTSP_k5_disjoint,glmnet_ridge,0.78,0.74,0.04,0.55,0.49,True
+ds004504_example,EC,AD_FTD_vs_CN,PSD_REGION_ABSOLUTE,kTSP_k9_disjoint,ranger_rf,0.81,0.8,0.01,0.61,0.59,True
+ds004504_example,EO,CN_vs_FTD,DERIVED_DECILES_ALL,kTSP_k3_nondisjoint,svm_linear_liblinear,0.72,0.75,-0.03,0.42,0.46,True
+ds004504_example,EC,AD_vs_FTD,PSD_REGION_ABSOLUTE,TSP_k1,sda_shrinklda,0.64,0.67,-0.03,0.28,0.34,True

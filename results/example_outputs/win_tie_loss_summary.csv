@@ -1,0 +1,5 @@
+task,wins,ties,losses,is_example
+AD_vs_CN,12,5,3,True
+AD_FTD_vs_CN,8,8,4,True
+CN_vs_FTD,5,6,9,True
+AD_vs_FTD,4,5,11,True

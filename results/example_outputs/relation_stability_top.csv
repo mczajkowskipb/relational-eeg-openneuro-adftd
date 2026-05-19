@@ -1,0 +1,4 @@
+task,feature_world,relation_rank,left_feature,right_feature,relation_text,selected_frequency,mean_score,is_example
+AD_vs_CN,PSD_REGION_ABSOLUTE,1,PSD_REGION_ABSOLUTE_frontal_theta,PSD_REGION_ABSOLUTE_occipital_alpha,frontal theta > occipital alpha,0.72,0.42,True
+AD_FTD_vs_CN,REGION_AGGREGATES_ALL,2,REGION_AGGREGATES_ALL_frontal_theta,REGION_AGGREGATES_ALL_parietal_alpha,frontal theta > parietal alpha,0.58,0.38,True
+CN_vs_FTD,DERIVED_DECILES_ALL,3,DERIVED_DECILES_ALL_frontal_theta_spread,DERIVED_DECILES_ALL_parietal_alpha_spread,frontal theta spread > parietal alpha spread,0.44,0.31,True
