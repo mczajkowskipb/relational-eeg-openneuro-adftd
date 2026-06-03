@@ -36,7 +36,7 @@
 36190	./results/paper_final/analysis_tables/05_region_frequency_best_ktsp.csv
 36190	./results/analysis_tables/paper_final/05_region_frequency_best_ktsp.csv
 36190	./paper_outputs/tables/analysis_tables/05_region_frequency_best_ktsp.csv
-19378	./checksums/SHA256SUMS.txt
+19485	./checksums/SHA256SUMS.txt
 14155	./examples/smoke_feature_tables/folds_small.csv
 8489	./results/example_outputs/ktsp_vs_all_delta_long.csv
 7757	./tests/test_frozen_outputs_schema.py
@@ -74,6 +74,7 @@
 1594	./R/lib/plotting_helpers.R
 1547	./docs/PUBLIC_AUDIT_PAPER_FINAL_CHECKSUMS.log
 1521	./R/scripts/make_basic_figures.R
+1492	./docs/PUBLIC_AUDIT_FINAL_SCRIPT_FIX.log
 1480	./Makefile
 1480	./docs/PUBLIC_AUDIT_MAKEFILE.log
 1460	./python/__pycache__/extract_p0_amplitude_deciles.cpython-310.pyc
