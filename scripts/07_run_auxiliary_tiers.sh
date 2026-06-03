@@ -7,6 +7,7 @@ Use the frozen paper outputs in:
   results/paper_final/
 
 For reproducibility scope and rerun requirements, see:
+  docs/REPRODUCIBILITY_SCOPE.md
   docs/reproducibility_guide.md
   docs/result_files.md
   docs/REVIEWER_QUICKSTART.md

@@ -66,7 +66,6 @@
 2130	./tests/__pycache__/test_feature_shapes.cpython-310-pytest-9.0.3.pyc
 2130	./tests/__pycache__/test_feature_shapes.cpython-310-pytest-6.2.5.pyc
 1840	./docs/reproducibility_guide.md
-1770	./docs/REPRODUCIBILITY_SCOPE.md
 1742	./R/scripts/make_paper_frozen_basic_figures.R
 1610	./results/paper_final/tables/tier4_pooled_best_ktsp_vs_classic.csv
 1610	./paper_outputs/tables/tier4_pooled_best_ktsp_vs_classic.csv
@@ -79,6 +78,7 @@
 1480	./docs/PUBLIC_AUDIT_MAKEFILE.log
 1460	./python/__pycache__/extract_p0_amplitude_deciles.cpython-310.pyc
 1459	./results/paper_final/MANIFEST_files.txt
+1422	./docs/REPRODUCIBILITY_SCOPE.md
 1406	./python/__pycache__/extract_p1_psd_bandpower.cpython-310.pyc
 1355	./paper_outputs/tables/PAPER_FINAL_EXPORT_MANIFEST.txt
 1301	./docs/PUBLIC_AUDIT_REQUIRED_OUTPUTS.log
@@ -114,17 +114,17 @@
 590	./docs/result_files.md
 587	./results/example_outputs/summary_best_ktsp_vs_classic.csv
 526	./docs/validation_and_leakage.md
-485	./scripts/01_download_openneuro.sh
+517	./scripts/01_download_openneuro.sh
 482	./docs/statistical_testing.md
 481	./R/scripts/run_statistical_tests.R
 470	./R/scripts/collect_results.R
 444	./tests/test_feature_shapes.py
 444	./examples/smoke_feature_tables/job_grid_small.csv
 443	./docs/PUBLIC_AUDIT_PY_COMPILE.log
+422	./scripts/07_run_auxiliary_tiers.sh
+409	./scripts/06_run_tier1_main.sh
 396	./python/compare_feature_tables.py
-390	./scripts/07_run_auxiliary_tiers.sh
 378	./docs/PUBLIC_AUDIT_PLACEHOLDERS.txt
-377	./scripts/06_run_tier1_main.sh
 377	./configs/folds.yaml
 361	./configs/paper_outputs.yaml
 358	./CITATION.cff

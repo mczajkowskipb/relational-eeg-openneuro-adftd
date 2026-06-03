@@ -4,7 +4,7 @@ This repository is a compact public reproducibility package for the manuscript:
 
 Compact Relative-Ordering Models for Interpretable EEG-Based Dementia Classification
 
-## What can be verified directly
+## Directly verifiable content
 
 The canonical frozen manuscript outputs are stored in:
 
@@ -12,15 +12,7 @@ The canonical frozen manuscript outputs are stored in:
 
 These files include machine-readable result tables, selected-pair summaries, statistical summaries, manifests, and checksums supporting the manuscript and Supplementary Material.
 
-The following can be checked directly from the repository:
-
-- presence of required paper-output CSV files,
-- schema and basic consistency of frozen outputs,
-- checksums of the frozen output package,
-- smoke/example scripts on small example tables,
-- documentation and configuration files used to describe the benchmark.
-
-## What is not a one-command rerun
+## Scope boundary
 
 This compact repository snapshot does not provide a single-command raw-to-paper rerun from downloaded EEG files.
 
@@ -34,10 +26,4 @@ When checking results reported in the manuscript or Supplementary Material, use:
 
     results/paper_final/
 
-Other output copies, such as:
-
-    paper_outputs/
-    results/analysis_tables/paper_final/
-    results/stat_tests/paper_final/
-
-are retained for export compatibility and convenience.
+Other output copies, such as paper_outputs/, results/analysis_tables/paper_final/, and results/stat_tests/paper_final/, are retained for export compatibility and convenience.

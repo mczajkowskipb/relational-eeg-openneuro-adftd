@@ -7,6 +7,7 @@ This repository provides frozen manuscript outputs, configurations, documentatio
 and scripts used around the benchmark workflow. Large OpenNeuro/ADSZ resources are not redistributed.
 
 See:
+  docs/REPRODUCIBILITY_SCOPE.md
   docs/reproducibility_guide.md
   docs/code_availability_statement.md
   docs/REVIEWER_QUICKSTART.md
