@@ -1,0 +1,3 @@
+docs/PUBLIC_AUDIT_SCRIPT_CONTENTS.log:9:echo "[rel-eeg] Mode B entry point: download/check OpenNeuro derivative .set files using pinned snapshots"
+docs/PUBLIC_AUDIT_SCRIPT_CONTENTS.log:31:echo "[rel-eeg] Mode B entry point: run Tier 1 on frozen/full feature tables"
+docs/PUBLIC_AUDIT_SCRIPT_CONTENTS.log:35:echo "[rel-eeg] Optional entry point: run Tier 2-4 auxiliary analyses"

@@ -1,3 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
-echo "[rel-eeg] Optional entry point: run Tier 2-4 auxiliary analyses"
+cat >&2 <<'MSG'
+[rel-eeg] Full auxiliary Tier 2-4 reruns are not bundled as single-command public scripts in this compact repository snapshot.
+
+Use the frozen paper outputs in:
+  results/paper_final/
+
+For reproducibility scope and rerun requirements, see:
+  docs/reproducibility_guide.md
+  docs/result_files.md
+  docs/REVIEWER_QUICKSTART.md
+MSG
+exit 2
