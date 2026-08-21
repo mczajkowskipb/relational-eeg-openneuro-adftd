@@ -14,9 +14,15 @@ The most important frozen outputs are in:
 
 This directory contains:
 - summary tables used for the manuscript and Supplementary Material,
-- selected-pair and relation-stability summaries,
+- selected-pair and recurrence summaries,
 - statistical comparison tables,
 - file manifests and checksums.
+
+Closed revision analyses are in `results/revision/`:
+
+- `gate2c/`: final handoff, metric lineage, Wilcoxon-filter provenance, and effective XGBoost configuration audit;
+- `wp1a/`: demographic effect sizes, age/sex-only repeat metrics, P0/P1 sensitivity summaries, protocol, and validation report;
+- `wp1b/`: original-versus-adjusted performance and exact-relation summaries at repeat and setting level, protocol, and validation report.
 
 The canonical frozen-output path is:
 
@@ -65,3 +71,7 @@ A full rerun requires downloading public EEG resources and executing the configu
 ## Interpretation boundary
 
 The frozen outputs support the manuscript's reported benchmark. Selected feature pairs are fitted model outputs and exploratory computational patterns. They should not be interpreted as validated clinical biomarkers or source-localised neurophysiological mechanisms.
+
+For the revision, read WP1B as a **sensitivity analysis using training-fold-only linear additive adjustment for age and sex**. Its Jaccard fields measure original-versus-adjusted exact-relation agreement in corresponding folds, not general cross-fold stability. P0 and P1 share cohorts and repeated-CV design but use different fold assignments, so cross-representation paired tests are not supported.
+
+The frozen standard-ML outputs include legacy XGBoost baselines whose effective configuration was audited after submission. See `results/revision/gate2c/gate2c_xgboost_parameter_audit.md`; no corrected XGBoost rerun is part of this package.

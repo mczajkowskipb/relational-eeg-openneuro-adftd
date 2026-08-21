@@ -1,0 +1,9 @@
+PASS: Gate 3 WP1A independent validation complete.
+PASS: frozen design = 1600 fits (P0=800, P1=800; 20x5; 8 settings).
+PASS: authoritative participants.tsv joins passed for all 1600 outer fits before modeling.
+PASS: all 16 prespecified age+sex model smoke fits succeeded and reproduced in the full grid.
+PASS: OOF prediction rows = 21120; 320 repeat groups; one row per participant/repeat.
+PASS: macro-F1 (zero-division=0), balanced accuracy, MCC, and per-class metrics independently reproduced.
+PASS: P0/P1 sensitivity is stratified and descriptive; no paired cross-representation test and no AUC.
+PASS: no residualization or permutation result artifact was generated.
+STOP: WP1A only; WP1B requires a separate master decision.

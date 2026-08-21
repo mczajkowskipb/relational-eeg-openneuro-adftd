@@ -1,0 +1,10 @@
+PASS: Gate 3 WP1B independent validation complete.
+PASS: exact frozen design = 4000 records (P0=2400, P1=1600; five representations; 8 settings; 20x5).
+PASS: all original comparators map to manifest-verified Gate 2C artifacts; original jobs rerun = 0.
+PASS: preflight/full residualization audits agree exactly on all non-roundoff fields; 4000/4000 independently satisfy the declared mean-preservation tolerance.
+PASS: paired OOF prediction rows = 52800; 800 repeat groups after combining five folds.
+PASS: macro-F1 (zero-division=0), balanced accuracy, MCC, class metrics, prediction changes, and correctness transitions independently reproduced.
+PASS: selected K, direction-sensitive/insensitive Jaccard, overlap coefficients, and reversal rates independently reproduced.
+PASS: train/test selected-relation vote tie rates pass numerator/denominator reconstruction.
+PASS: P0/P1 remain stratified; no cross-family paired test, p-values, AUC, or permutation analysis.
+STOP: WP1B only; no WP1C or further experiment was started.

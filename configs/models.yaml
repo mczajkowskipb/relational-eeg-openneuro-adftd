@@ -55,6 +55,12 @@ classic_fast:
   - svm_linear_liblinear
   - knn_euclidean
   - ranger_rf
+  # Frozen legacy XGBoost comparators. The submitted API call reproduced the
+  # archived predictions, but the effective booster configuration used
+  # reg:squarederror, max_depth=6, eta~=0.3, subsample=1, and
+  # colsample_bytree=1. Only the boosting-round counts (50 and 100) differed.
+  # See results/revision/gate2c/gate2c_xgboost_parameter_audit.md. Do not read
+  # the model IDs as verified intended hyperparameter profiles.
   - xgboost_shallow
   - xgboost_default
   - sda_shrinklda

@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: setup download audit features folds smoke tier1 auxiliary collect stats figures validate-frozen paper-frozen paper-frozen-figures clean-intermediate test-python test-r
+.PHONY: setup download audit features folds smoke tier1 auxiliary collect stats figures validate-frozen validate-revision paper-frozen paper-frozen-figures clean-intermediate test-python test-r
 
 setup:
 	bash scripts/00_setup_project.sh
@@ -37,6 +37,9 @@ figures:
 
 validate-frozen:
 	python tests/test_frozen_outputs_schema.py --root results/paper_final
+
+validate-revision:
+	python tests/test_revision_outputs.py
 
 paper-frozen: validate-frozen
 	bash scripts/12_export_paper_frozen_outputs.sh --source results/paper_final --out-tables paper_outputs/tables
