@@ -6,6 +6,26 @@ It accompanies the manuscript:
 
 **Compact Relative-Ordering Models for Interpretable EEG-Based Dementia Classification**
 
+<!-- RESULTS_AT_A_GLANCE_START -->
+## Results at a glance
+
+Across the six prespecified condition × task settings, primary k-TSP models achieved **2 wins, 1 near tie, and 3 losses** relative to the strongest setting-specific standard-ML comparator. The corresponding Δ macro-F1 values ranged from **−0.030 to +0.035**.
+
+![Primary k-TSP versus strongest standard ML across the six main settings](docs/figures/revision_main_delta_macro_f1.svg)
+
+| Condition | Task | Primary k-TSP | Strongest standard ML | Δ macro-F1 | Outcome |
+|---|---|---:|---|---:|---|
+| EC | AD vs CN | 0.781 | Random forest (0.810) | -0.030 | Standard ML stronger |
+| EC | FTD vs CN | 0.761 | Random forest (0.726) | +0.035 | k-TSP stronger |
+| EC | AD+FTD vs CN | 0.749 | Random forest (0.778) | -0.029 | Standard ML stronger |
+| EO/photo | AD vs CN | 0.757 | Shrinkage LDA (0.785) | -0.028 | Standard ML stronger |
+| EO/photo | FTD vs CN | 0.809 | Ridge LR (0.810) | -0.001 | Near tie |
+| EO/photo | AD+FTD vs CN | 0.757 | Shrinkage LDA (0.736) | +0.021 | k-TSP stronger |
+
+The comparison above is reproduced directly from the frozen revision evidence by `make validate-revision`; no additional model fitting is performed.
+
+<!-- RESULTS_AT_A_GLANCE_END -->
+
 The repository focuses on a reproducible benchmark workflow built around subject-level validation, frozen benchmark outputs, statistical summaries, and manuscript-level table exports. It is designed to let reviewers and collaborators verify the main result tables without downloading the full EEG datasets or regenerating all EEG features.
 
 ## What this repository reproduces
@@ -49,6 +69,7 @@ make smoke
 make validate-frozen
 make validate-revision
 make paper-frozen
+make revision-figure
 ```
 
 The expected behavior is:
@@ -57,6 +78,7 @@ The expected behavior is:
 - `make validate-frozen` checks the schema of the frozen manuscript-level CSV files.
 - `make validate-revision` checks the closed Gate 2C/WP1A/WP1B files without fitting or replay.
 - `make paper-frozen` exports manuscript-level tables and statistical summaries from `results/paper_final/`.
+- `make revision-figure` regenerates the main six-setting comparison figure shown above directly from frozen revision evidence.
 
 ## Recommended setup
 

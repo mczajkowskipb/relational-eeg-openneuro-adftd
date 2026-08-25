@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 PYTHON ?= python3
 
-.PHONY: setup download audit features folds smoke tier1 auxiliary collect stats figures validate-frozen validate-revision paper-frozen paper-frozen-figures clean-intermediate test-python test-r
+.PHONY: setup download audit features folds smoke tier1 auxiliary collect stats figures validate-frozen validate-revision paper-frozen paper-frozen-figures revision-figure clean-intermediate test-python test-r
 
 setup:
 	bash scripts/00_setup_project.sh
@@ -59,3 +59,7 @@ test-r:
 
 clean-intermediate:
 	rm -rf data/features/*.csv data/manifests/*.csv results/jobs/smoke results/summaries/*.csv results/stat_tests/*.csv paper_outputs/figures/*.pdf paper_outputs/figures/*.svg
+
+
+revision-figure:
+	Rscript R/scripts/make_revision_readme_figure.R
