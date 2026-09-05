@@ -1,0 +1,27 @@
+{
+  "B": 1000,
+  "base_seed": 20260518,
+  "canonical_runner_sha256": "c64ab42fbcb13e3664eab8f0ad6c638bd4661c5d778fb4f1091fe486a346e25a",
+  "conditions": [
+    "ds004504__EC",
+    "ds006036__EO_or_photomark"
+  ],
+  "exp1_bundles": 6000,
+  "exp1_fold_fits": 600000,
+  "exp2_bundles": 6,
+  "exp2_fold_fits": 600,
+  "expected_slowfast_candidate_pairs": 150,
+  "feature_count": 25,
+  "gate2c_grid_sha256": "0abaf4e5500778c5c91f77803f2c43e62af3ef464977ad4cf4942a6758c8fb00",
+  "layer": "P1_psd_bandpower_from_derivatives",
+  "permutation_seed": 20260904,
+  "source_fold_jobs": 600,
+  "status": "PASS",
+  "tasks": [
+    "AD_vs_CN",
+    "CN_vs_FTD",
+    "AD_FTD_vs_CN"
+  ],
+  "unrestricted_candidate_pairs": 300,
+  "world": "PSD_REGION_ABSOLUTE"
+}

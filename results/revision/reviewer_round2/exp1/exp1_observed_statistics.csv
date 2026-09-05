@@ -1,0 +1,7 @@
+condition,task,n_fold_jobs,n_selected_relations,mean_selected_k,max_exact_pair_frequency,max_exact_pair_count,max_exact_pairs,slow_gt_fast_mean_within_fit_share,theta_gt_alpha_mean_within_fit_share,anterior_gt_posterior_mean_within_fit_share,frontal_theta_gt_occipital_alpha_mean_within_fit_share,max_prespecified_motif_share
+ds004504__EC,AD_FTD_vs_CN,100,486,4.86,1.0,100,frontal_beta_psd_abs>occipital_beta_psd_abs,0.32755555555555504,0.32755555555555504,0.8386666666666664,0.19333333333333322,0.8386666666666664
+ds004504__EC,AD_vs_CN,100,560,5.6,1.0,100,frontal_beta_psd_abs>occipital_beta_psd_abs,0.2973333333333329,0.2973333333333329,0.8804444444444438,0.1933333333333332,0.8804444444444438
+ds004504__EC,CN_vs_FTD,100,406,4.06,0.86,86,occipital_beta_psd_abs>frontal_beta_psd_abs,0.0,0.0,0.003333333333333333,0.0,0.003333333333333333
+ds006036__EO_or_photomark,AD_FTD_vs_CN,100,716,7.16,0.85,85,frontal_delta_psd_abs>occipital_delta_psd_abs,0.24399999999999955,0.24399999999999955,0.7688888888888884,0.03555555555555556,0.7688888888888884
+ds006036__EO_or_photomark,AD_vs_CN,100,546,5.46,0.9,90,temporal_beta_psd_abs>occipital_beta_psd_abs,0.25666666666666627,0.25666666666666627,0.9215555555555549,0.05155555555555557,0.9215555555555549
+ds006036__EO_or_photomark,CN_vs_FTD,100,782,7.82,0.85,85,parietal_gamma_psd_abs>central_gamma_psd_abs,0.0,0.0,0.0011111111111111111,0.0,0.0011111111111111111

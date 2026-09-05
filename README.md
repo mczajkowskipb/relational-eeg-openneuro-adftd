@@ -46,7 +46,7 @@ manuscript-table export
 
 The repository also includes a small smoke-test benchmark using synthetic feature tables. This smoke mode verifies that the repository structure, metric functions, leakage checks, result collection, and table-export scripts work correctly.
 
-Revision evidence from the closed Gate 2C, WP1A, and WP1B workflows is available under `results/revision/`. These are frozen, validated outputs. They are provided for inspection and manuscript-level verification; they are not an instruction to rerun the 4,000 primary k-TSP records.
+Validated revision evidence is available under `results/revision/`. In addition to the original demographic baseline and training-fold-only age/sex-adjustment sensitivity outputs, the directory now includes the compact public evidence package for participant-label permutation, task-by-condition slow-fast restriction, repeated demographic matching, and targeted relation-pattern ablation. These files are provided for inspection and manuscript-level verification, not as an instruction to rerun the production jobs.
 
 ## Data policy
 
@@ -68,6 +68,7 @@ Clone the repository and install the minimal Python/R dependencies.
 make smoke
 make validate-frozen
 make validate-revision
+make validate-reviewer-round2
 make paper-frozen
 make revision-figure
 ```
@@ -77,6 +78,7 @@ The expected behavior is:
 - `make smoke` runs a small synthetic benchmark and internal validation tests.
 - `make validate-frozen` checks the schema of the frozen manuscript-level CSV files.
 - `make validate-revision` checks the closed Gate 2C/WP1A/WP1B files without fitting or replay.
+- `make validate-reviewer-round2` checks the compact public EXP1-EXP4 evidence without fitting models.
 - `make paper-frozen` exports manuscript-level tables and statistical summaries from `results/paper_final/`.
 - `make revision-figure` regenerates the main six-setting comparison figure shown above directly from frozen revision evidence.
 
@@ -102,7 +104,7 @@ R/                       R functions and benchmark/statistical scripts
 tests/                   metric, leakage, schema, and structure tests
 examples/                synthetic smoke-test feature tables
 results/paper_final/     frozen manuscript-level outputs
-results/revision/        frozen Gate 2C, WP1A, and WP1B revision evidence
+results/revision/        validated revision evidence, including reviewer-round-2 analyses
 paper_outputs/tables/    exported manuscript-level tables
 docs/                    reproducibility and benchmark documentation
 ```
@@ -130,7 +132,8 @@ The revision analyses preserve the following interpretation boundaries:
 - XGBoost rows are legacy baselines with an audited effective configuration, not corrected reruns;
 - WP1A is an age-and-sex-only baseline, and WP1B is a sensitivity analysis using training-fold-only linear additive adjustment for age and sex;
 - WP1B exact-relation Jaccard values compare original with adjusted fits in corresponding folds and are not general cross-fold stability estimates;
-- AUC, permutation analysis, WP1C, and additional model fitting are outside this revision package.
+- AUC and corrected XGBoost fitting remain outside the manuscript outcomes;
+- the reviewer-round-2 package adds controlled participant-label permutation, slow-fast restriction, demographic matching, and pattern-ablation evidence while preserving the accepted production k-TSP contract.
 
 ## Figures
 
