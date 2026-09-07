@@ -1,0 +1,10 @@
+{
+  "details": {
+    "csv_files_checked_for_auc": 10880,
+    "exp4_variants": 7,
+    "input_hashes_verified": 2400,
+    "matching_audit_rows": 300
+  },
+  "stage": "exp3",
+  "status": "PASS"
+}

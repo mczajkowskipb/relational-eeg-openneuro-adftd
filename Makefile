@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 PYTHON ?= python3
 
-.PHONY: setup download audit features folds smoke tier1 auxiliary collect stats figures validate-frozen validate-revision paper-frozen paper-frozen-figures revision-figure clean-intermediate test-python test-r
+.PHONY: setup download audit features folds smoke tier1 auxiliary collect stats figures validate-frozen validate-revision validate-reviewer-round2 paper-frozen paper-frozen-figures revision-figure clean-intermediate test-python test-r
 
 setup:
 	bash scripts/00_setup_project.sh
@@ -42,6 +42,9 @@ validate-frozen:
 validate-revision:
 	$(PYTHON) tests/test_revision_outputs.py
 	$(PYTHON) tests/test_revision_numeric_claims.py
+
+validate-reviewer-round2:
+	$(PYTHON) tests/test_reviewer_round2_outputs.py
 
 paper-frozen: validate-frozen
 	bash scripts/12_export_paper_frozen_outputs.sh --source results/paper_final --out-tables paper_outputs/tables

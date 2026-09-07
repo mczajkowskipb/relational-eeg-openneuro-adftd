@@ -1,0 +1,28 @@
+{
+  "caliper_sd": 0.25,
+  "canonical_runner_sha256": "c64ab42fbcb13e3664eab8f0ad6c638bd4661c5d778fb4f1091fe486a346e25a",
+  "ec_participants_sha256": "bd17cf02ec9733c9029d4a6d977b2918309b3c667ff9ceb1b5dce6e3cebccbc1",
+  "eo_participants_sha256": "e51065da0721dca0999da5d1412abd71c48c9dbd4ec68d219976194a283efc4f",
+  "exp3_bundles": 1200,
+  "exp3_fold_fits": 120000,
+  "exp4_bundles": 42,
+  "exp4_fold_fits": 4200,
+  "exp4_variants": [
+    "R2_without_theta_alpha",
+    "R2_without_slow_fast",
+    "R2_without_anterior_posterior",
+    "R2_without_frontal_theta_occipital_alpha",
+    "R2_theta_alpha_only",
+    "R2_slow_fast_only",
+    "R2_anterior_posterior_only"
+  ],
+  "gate2c_grid_sha256": "0abaf4e5500778c5c91f77803f2c43e62af3ef464977ad4cf4942a6758c8fb00",
+  "matching_replicates": 100,
+  "matching_seed": 20260905,
+  "note": "frontal-theta/occipital-alpha-only omitted because it contains one eligible unordered pair",
+  "status": "PASS",
+  "worlds": [
+    "PSD_REGION_ABSOLUTE",
+    "PSD_ABSOLUTE_CHANNEL_BAND"
+  ]
+}

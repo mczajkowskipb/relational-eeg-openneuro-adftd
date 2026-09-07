@@ -51,5 +51,10 @@ Canonical frozen output directory:
 | WP1B repeat-level class metrics and prediction transitions | `results/revision/wp1b/gate3_wp1b_repeat_metrics.csv` |
 | WP1B setting-level exact-relation agreement | `results/revision/wp1b/gate3_wp1b_relation_setting_summary.csv` |
 | WP1B exact K by fold, relation agreement, reversals, and tie rates | `results/revision/wp1b/gate3_wp1b_repeat_relation_summary.csv` |
+| Participant-label permutation observed and null statistics | `results/revision/reviewer_round2/exp1/` |
+| Task-by-condition slow-fast restriction results | `results/revision/reviewer_round2/exp2/` |
+| Repeated exact-sex/age-matched cohort sensitivity | `results/revision/reviewer_round2/exp3/` |
+| Targeted relation-pattern ablation results | `results/revision/reviewer_round2/exp4/` |
+| Reviewer-round-2 design and validation reports | `results/revision/reviewer_round2/config/`; `results/revision/reviewer_round2/validation/` |
 
 WP1B relation-agreement fields compare frozen original and age/sex-adjusted fits in corresponding folds. They are not cross-fold stability estimates.

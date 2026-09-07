@@ -1,0 +1,7 @@
+condition,task,fold_jobs,unrestricted_candidate_pairs,slowfast_candidate_pairs,retention,mean_selected_k,min_selected_k,max_selected_k,total_selected_relations,folds_k1,folds_k3,folds_k5,folds_k9
+ds004504__EC,AD_FTD_vs_CN,100,300,150,0.5,1.12,1,5,112,96,2,2,0
+ds004504__EC,AD_vs_CN,100,300,150,0.5,1.0,1,1,100,100,0,0,0
+ds004504__EC,CN_vs_FTD,100,300,150,0.5,2.38,1,5,238,63,5,32,0
+ds006036__EO_or_photomark,AD_FTD_vs_CN,100,300,150,0.5,1.12,1,9,112,97,2,0,1
+ds006036__EO_or_photomark,AD_vs_CN,100,300,150,0.5,1.2,1,9,120,93,6,0,1
+ds006036__EO_or_photomark,CN_vs_FTD,100,300,150,0.5,1.4,1,9,140,91,0,8,1
